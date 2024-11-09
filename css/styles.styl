@@ -1,0 +1,106 @@
+@require _variables
+@require _buttons
+@require _font-treatments
+
+body
+  position: absolute
+  overflow-y: auto
+  overflow-x: hidden
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  color: $black
+  background-color: $white
+  font-family: 'Lato', sans-serif
+  letter-spacing: 0.5px
+  font-size: 18px
+  line-height: 1.5
+  margin: 0 8px
+
+h1, h2, h3, h4
+  font-family: "Parisienne", cursive
+  margin-top: 0
+  font-weight: normal
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 9
+  height: 58px
+  background: rgba(255,255,255,0.8)
+
+  .rsvp, .registry
+    position: absolute
+    top: 10px
+    right: 20px
+    text-transform: uppercase
+    letter-spacing: 2px
+    font-size: 10px
+    font-weight: bold
+
+    a.rsvp-button
+      margin-left: 20px
+
+  .rsvp
+    right: 130px
+
+section
+  width: 100%
+  display: inline-block
+  padding: 70px 110px
+  position: relative
+  box-sizing: border-box
+  min-height: 400px
+
+  &.fullscreen
+    height: 100%
+
+  &.dark
+    background-color: $black
+    color: $white
+
+    .section-header:after
+      border-bottom 2px solid $white
+
+  &.gray
+    background-color: WhiteSmoke
+
+.grid
+  display: flex
+  justify-content: space-between
+
+.col-3
+  width: 30%
+
+.col-2
+  width: 48%
+
+.col-3x2
+  width: 60%
+
+.seperator
+  display: block
+  text-align: left
+  margin: 20px 0 60px 0
+  line-height: 0
+
+  &:after
+    content: ''
+    width: 20%
+    height: 2px
+    background-color: $black
+    display: inline-block
+
+
+@require '_home'
+@require '_location'
+@require '_rsvp'
+@require '_accomodations'
+@require '_faq'
+@require '_image-sections'
+@require '_story'
+@require '_outoftown'
+@require '_responsive'

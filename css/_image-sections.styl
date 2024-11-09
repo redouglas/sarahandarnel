@@ -1,0 +1,40 @@
+image()
+  background-position: center center
+  background-repeat: norepeat
+  background-size: cover
+  height: 0
+  box-sizing: border-box
+  position: relative
+
+.images
+  height: auto
+  padding: 0
+
+  &.three-square
+    .image
+      image()
+      width: 33.333%
+      float: left
+      padding-top: 33.333%
+      background-color: gray
+      border-right: 8px solid $white
+
+      &:last-child
+        border-right: none
+
+      &.one
+        background-image: url('../img/square/1.jpg')
+
+      &.two
+        background-image: url('../img/square/2.jpg')
+
+      &.three
+        background-image: url('../img/square/4.jpg')
+
+.caption
+  position: absolute
+  bottom: -15px
+  right: 10px
+  font-style: italic
+  text-align: center
+  font-size: 11px

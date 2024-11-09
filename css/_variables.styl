@@ -1,0 +1,41 @@
+$white = #fff
+$black = #2f2f2f
+$grey = #f9f9f9
+$gray = $grey
+
+$brdrweight = 1px
+$brdrdist = 15px
+
+accent()
+  content: ''
+  position: absolute
+  width: 30%
+  height: 40%
+
+accent-top-left(color)
+  &:before
+    accent()
+    top: $brdrdist
+    left: $brdrdist
+    border-top: $brdrweight solid color
+    border-left: $brdrweight solid color
+
+accent-bottom-right(color)
+  &:after
+    accent()
+    bottom: $brdrdist
+    right: $brdrdist
+    border-bottom: $brdrweight solid color
+    border-right: $brdrweight solid color
+
+
+accent-bottom-left(color)
+  &:after
+    accent()
+    bottom: $brdrdist
+    left: $brdrdist
+    border-bottom: $brdrweight solid color
+    border-left: $brdrweight solid color
+
+elevate()
+  box-shadow: 0px 5px 17px 1px rgba(0,0,0,0.2);

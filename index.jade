@@ -1,0 +1,59 @@
+doctype
+html
+  head
+    title Sarah &amp; Arnel
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="stylesheet", href="css/styles.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:300,900Parisienne")
+    link(rel='icon', type='image/png', sizes='32x32', href='/favicons/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='/favicons/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='/favicons/favicon-16x16.png')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='theme-color', content='#ffffff')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    script(type="text/javascript", src="js/jquery-2.0.3.min.js")
+  body
+    .header
+      .rsvp
+        span.hidden-mobile Please RSVP By 🟥🟥🟥🟥🟥
+        a.button.black.rsvp-button(href="#rsvp") RSVP
+      .registry
+        a(href="https://www.amazon.com/wedding/share/sarahandarnel", target="_blank").button.black Registry
+
+    section.home.fullscreen
+      .content-container
+        .content
+          include _home.jade
+        .background-element
+      .section-background
+
+    section.story
+      include _story
+
+    section.location
+      include _location
+
+    section.images.three-square
+      .image.one
+        .caption.light
+      .image.two
+        .caption.dark
+      .image.three
+        .caption.light
+
+    section.faq
+      include _faq
+
+    // section.accomodations
+      // include _accomodations
+
+
+    // section.outoftown
+      // include _outoftown
+
+    section.rsvp
+      include _rsvp
+
+
+
+

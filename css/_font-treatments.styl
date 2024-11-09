@@ -1,0 +1,60 @@
+.section-header
+  font-size: 45px
+  margin-bottom: 40px
+  font-weight: normal
+  position: relative
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 110px
+    border-bottom 2px solid $black
+    bottom: -10px
+
+  &.right
+    text-align: right
+
+    &:after
+      right: 0
+
+
+h3
+  font-family: 'Lato' !important
+  font-size: 12px
+  text-transform: uppercase
+  font-weight: 900 !important
+  letter-spacing: 2px
+
+
+a
+  color: $black
+  font-style: italic
+
+  &:hover
+    color: lighten($black, 10)
+
+  &:visited, &:active
+    color: $black
+
+section.dark a
+  color: darken($white, 10)
+
+  &:hover
+    color: $white
+
+  &:visited, &:active
+    color: darken($white, 10)
+
+.question
+  font-family: 'Lato', san-serif
+  font-weight: 900
+  font-size: 0.8em
+  letter-spacing: 2px
+  text-transform: uppercase
+
+.answer
+  line-height: 1.5
+
+.strike
+  text-decoration: line-through

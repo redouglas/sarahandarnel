@@ -1,0 +1,32 @@
+@require '_variables'
+
+button, a.button
+  text-decoration: none
+  display: inline-block
+  border: none
+  padding: 10px 15px
+  font-family: 'Lato'
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-weight: normal
+  font-size: 11px
+  cursor: pointer
+  transition: background 200ms ease
+  font-style: normal
+  border-radius: 2px;
+
+.white
+  background: $white
+  border-color: $white
+  color $black !important
+
+  &:hover
+    background: darken($white, 5)
+
+.black
+  background: $black
+  border-color: $black
+  color: $white !important
+
+  &:hover
+    background: lighten($black, 10)
