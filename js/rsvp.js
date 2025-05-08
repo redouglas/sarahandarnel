@@ -10,7 +10,10 @@ $(function() {
       alert('Please let us know if you will be attending or not.');
       return;
     } else if (!$form.find('input.name').val()) {
-      alert ('Please fill in your name.')
+      alert ('Please fill in your name.');
+      return;
+    } else if (!$form.find('input.email').val()) {
+      alert ('Please fill in your email so we can contact you if needed.');
       return;
     } else if ($form.find('select.attending option:selected').val() === 'yes' && 
               !$form.find('select.dinner option:selected').val()) {
