@@ -1,43 +1,59 @@
 h2.section-header RSVP
 a(name="rsvp")
-p Sorry it's too early! RSVPs will open soon, please check back later.
+//- p Sorry it's too early! RSVPs will open soon, please check back later.
 //- p RSVPs are now closed! If you have any changes, please email us at&nbsp;
 //-   a(href='mailto:wedding@sarahandarnel.com') wedding@sarahandarnel.com.
 
-//- form#rsvpForm
-//-   p.reminder Reminder: Because of limitations from the venue and to create a more relaxed atmosphere for our guests, only children from close family will be present. Thank you for understanding. If you have any questions or trouble RSVPing, please email us at&nbsp;
-//-     a(href='mailto:wedding@sarahandarnel.com') wedding@sarahandarnel.com.
-//-   .grid
-//-     .col-2
-//-       .field
-//-         label Your Full Name
-//-         input.name(type='text', name='name')
-//-       .field
-//-         label Email
-//-         input(type='email', name='email')
-//-       .field
-//-         label Dietary Restrictions
-//-         textarea(name='dietary_restr')
-//-     .col-2
-//-       .field
-//-         label Will you be attending?
-//-         .select-wrap
-//-           select(name='attending')
-//-             option(disabled selected value) Select one
-//-             option(value='yes') Yes - I'll be there
-//-             option(value='no') No - I have to miss it
-//-       .field
-//-         label Your Guest's Full Name
-//-         input(type='text', name='guest_name')
-//-       .field
-//-         label Song Requests
-//-         textarea(name='song_reqs', placeholder="Enter as many songs as you want. If you think of any more after you have RSVPed, just send us an email")
-//-   button.black(type='submit') Submit
-//- .rsvp-success
-//-   h3 Thank you
-//-   p We have received your information.
-//- .rsvp-error
-//-   h3 Error
-//-   p Sorry, there was an error submittind your form. Please contact us via phone or email instead.
+form#rsvpForm
+  p.reminder Reminder: Because of limitations from the venue and to create a more relaxed atmosphere for our guests, only children from close family will be present. Thank you for understanding. If you have any questions or trouble RSVPing, please email us at&nbsp;
+    a(href='mailto:wedding@sarahandarnel.com') wedding@sarahandarnel.com.
+  .grid
+    .col-2
+      .field
+        label Your Full Name
+        input.name(type='text', name='name')
+      .field
+        label Email
+        input(type='email', name='email')
+      .field
+        label Your Dinner Choice
+        .select-wrap
+          select.dinner(name='dinner_choice')
+            option(disabled selected value) Select one
+            option(value='chicken') Chicken
+            option(value='beef') Beef
+            option(value='vegetarian') Vegetarian
+      .field
+        label Dietary Restrictions
+        textarea(name='dietary_restr')
+    .col-2
+      .field
+        label Will you be attending?
+        .select-wrap
+          select.attending(name='attending')
+            option(disabled selected value) Select one
+            option(value='yes') Yes - I'll be there
+            option(value='no') No - I have to miss it
+      .field
+        label Your Guest's Full Name
+        input(type='text', name='guest_name')
+      .field
+        label Your Guest's Dinner Choice
+        .select-wrap
+          select.guest-dinner(name='dinner_choice_guest')
+            option(disabled selected value) Select one
+            option(value='chicken') Chicken
+            option(value='beef') Beef
+            option(value='vegetarian') Vegetarian
+      .field
+        label Song Requests
+        textarea(name='song_reqs', placeholder="Enter as many songs as you want. If you think of any more after you have RSVPed, just send us an email")
+  button.black(type='submit') Submit
+.rsvp-success
+  h3 Thank you
+  p We have received your information.
+.rsvp-error
+  h3 Error
+  p Sorry, there was an error submittind your form. Please contact us via phone or email instead.
 
 script(type="text/javascript", src="/js/rsvp.js")
