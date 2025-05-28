@@ -19,7 +19,7 @@ $(function() {
               !$form.find('select.dinner option:selected').val()) {
       alert('Please choose a dinner option.');
       return;
-    } else if ($form.find('input.name').val() && 
+    } else if ($form.find('input.guest-name').val() && 
               !$form.find('select.guest-dinner option:selected').val()) {
       alert('Please choose a dinner option for your guest.');
       return;
